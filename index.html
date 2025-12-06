@@ -1,21 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matheus Fernando | Advocacia e Consultoria Jurídica | OAB/DF 85.922</title>
-
+    <title>Matheus Fernando | Advocacia Especializada</title>
+    
+    <meta name="description" content="Advocacia Trabalhista, Previdenciária e do Consumidor. Atendimento digital em todo o Brasil e presencial em Brasília.">
     <link rel="icon" href="logo-matheus-fernando.jpg" type="image/jpeg">
 
-    <meta property="og:title" content="Matheus Fernando | Advocacia e Consultoria Jurídica">
-    <meta property="og:description" content="Atuação técnica nas áreas do Direito do Trabalho, Previdenciário e Consumidor.">
-    <meta property="og:image" content="matheus-fernando-perfil.jpg">
-    <meta property="og:url" content="https://matheusfernandoadv.github.io/matheusfernandoadv/">
-    <meta property="og:type" content="website">
-
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <script>
@@ -24,203 +18,315 @@
                 extend: {
                     colors: {
                         'adv-navy': '#0A192F',
-                        'adv-gold': '#FFD700',
-                        'adv-dark-blue': '#1e3a8a',
-                        'adv-light-gold': '#FDD7A3',
+                        'adv-navy-light': '#112240',
+                        'adv-gold': '#D4AF37', // Tom de dourado mais "premium"
+                        'adv-gold-light': '#FDD7A3',
+                        'whatsapp-green': '#25D366',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                     },
-                    // Animações de pulso removidas
+                    backgroundImage: {
+                        'hero-gradient': 'linear-gradient(to right bottom, #0A192F, #0d1f3a, #102645)',
+                    }
                 }
             }
         }
     </script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0A192F;
-            scroll-behavior: smooth; 
-        }
 
-        .header-logo {
-            filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+    <style>
+        /* Animação do Botão Flutuante */
+        @keyframes pulse-gold {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+        .btn-pulse {
+            animation: pulse-gold 2s infinite;
+        }
+        
+        /* Ajustes finos para mobile */
+        .mobile-padding {
+            padding-top: max(80px, env(safe-area-inset-top));
         }
     </style>
 </head>
-<body class="bg-adv-navy text-gray-100 relative"> 
-    
-    <div 
-        class="fixed inset-0 z-0 opacity-10 pointer-events-none" 
-        style="background-image: url('logo-matheus-fernando.jpg'); background-repeat: no-repeat; background-position: center 10%; background-size: 50%;"
-    ></div>
-    <header class="sticky top-0 z-40 w-full bg-adv-dark-blue shadow-xl border-b border-adv-dark-blue">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <img 
-                    src="logo-matheus-fernando.jpg" 
-                    alt="Logo Matheus Fernando Advocacia - OAB DF"
-                    class="h-14 w-auto rounded-full border-2 border-adv-gold header-logo" 
-                    onerror="this.onerror=null; this.src='https://placehold.co/56x56/1e3a8a/FFD700?text=MF'"
-                >
-                <span class="text-2xl font-extrabold tracking-wider text-white hidden sm:inline">MATHEUS FERNANDO</span>
-            </div>
-            
-            <div class="hidden md:flex items-center space-x-6">
-                <span class="text-sm font-semibold text-adv-light-gold">OAB/DF 85.922</span>
-                <a 
-                    href="https://wa.me/5561998566219"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="px-6 py-2 bg-adv-gold text-adv-navy font-bold rounded-lg shadow-lg hover:bg-adv-light-gold transition duration-300"
-                >
-                    Entre em Contato
-                </a>
-            </div>
+<body class="bg-adv-navy text-gray-50 font-sans antialiased selection:bg-adv-gold selection:text-adv-navy">
 
-            <div class="md:hidden">
-                <a 
-                    href="https://wa.me/5561998566219"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="px-4 py-2 bg-adv-gold text-adv-navy font-bold rounded-lg shadow-lg text-sm"
-                >
-                    Contato
-                </a>
+    <a href="https://wa.me/5561998566219?text=Ol%C3%A1%20Dr.%20Matheus,%20gostaria%20de%20uma%20consulta%20jur%C3%ADdica." 
+       target="_blank"
+       class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-16 h-16 bg-whatsapp-green text-white rounded-full shadow-2xl transition-transform hover:scale-110 btn-pulse focus:outline-none focus:ring-4 focus:ring-green-300"
+       aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp text-4xl"></i>
+    </a>
+
+    <header class="fixed top-0 w-full z-40 bg-adv-navy/95 backdrop-blur-md border-b border-adv-navy-light shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <img src="logo-matheus-fernando.jpg" 
+                         alt="Logo MF" 
+                         class="h-10 w-10 md:h-12 md:w-12 rounded-full border border-adv-gold object-cover"
+                         onerror="this.src='https://placehold.co/100x100/112240/D4AF37?text=MF'">
+                    <div class="flex flex-col">
+                        <span class="text-lg md:text-xl font-bold tracking-tight text-white leading-tight">MATHEUS FERNANDO</span>
+                        <span class="text-[10px] md:text-xs text-adv-gold uppercase tracking-widest">Advocacia Especializada</span>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center gap-4">
+                    <span class="text-sm text-gray-400">OAB/DF 85.922</span>
+                    <a href="https://wa.me/5561998566219" 
+                       class="px-5 py-2.5 bg-transparent border border-adv-gold text-adv-gold font-semibold rounded-lg hover:bg-adv-gold hover:text-adv-navy transition duration-300">
+                        Atendimento Online
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <a href="https://wa.me/5561998566219" class="text-adv-gold font-bold text-sm bg-adv-navy-light px-3 py-1.5 rounded-md border border-adv-navy-light">
+                        <i class="fas fa-comment-dots mr-1"></i> Contato
+                    </a>
+                </div>
             </div>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative z-10">
-        <div class="flex flex-col lg:flex-row items-center justify-between">
-            <div class="lg:w-1/2 mb-10 lg:mb-0 text-center lg:text-left">
-                <p class="text-sm font-semibold uppercase tracking-widest text-adv-gold mb-3">Advocacia e Consultoria Jurídica em Brasília</p>
-                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-white mb-6 max-w-full">
-                    Matheus Fernando | <span class="text-adv-gold">Advocacia e Consultoria Jurídica</span>
-                </h1>
-                <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-xl mx-auto lg:mx-0">
-                    Atuação técnica nas áreas do Direito do Trabalho, Previdenciário e Consumidor. Atendimento profissional mediante agendamento.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center lg:justify-start">
-                    <a 
-                        href="https://wa.me/5561998566219"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="flex justify-center items-center px-8 py-3 bg-adv-gold text-adv-navy font-bold rounded-xl shadow-xl hover:bg-adv-light-gold transition duration-300 transform hover:scale-[1.02]"
-                    >
-                        <i class="fas fa-phone text-xl mr-3"></i>
-                        Ver Contato Profissional
-                    </a>
-                    <a 
-                        href="https://www.instagram.com/matheusfernandoadv/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="flex justify-center items-center px-8 py-3 bg-adv-dark-blue border border-adv-gold text-white font-semibold rounded-xl shadow-xl hover:bg-adv-navy transition duration-300 transform hover:scale-[1.02]"
-                    >
-                        <i class="fab fa-instagram text-xl mr-3"></i>
-                        @matheusfernandoadv
-                    </a>
-                </div>
-            </div>
+    <main class="relative pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-adv-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-blue-900/20 rounded-full blur-3xl pointer-events-none"></div>
 
-            <div class="lg:w-1/3 flex justify-center p-4 bg-adv-dark-blue rounded-xl shadow-2xl border-4 border-adv-gold">
-                <img 
-                    src="matheus-fernando-perfil.jpg" 
-                    alt="Matheus Fernando, Advogado, OAB DF 85.922"
-                    class="w-full max-w-xs md:max-w-sm rounded-lg object-cover aspect-[3/4]"
-                    onerror="this.onerror=null; this.src='https://placehold.co/400x533/0A192F/FFD700?text=Sua+Foto+Profissional';"
-                >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col-reverse lg:flex-row items-center gap-12">
+                
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <div class="inline-flex items-center px-3 py-1 rounded-full bg-adv-navy-light border border-adv-gold/30 text-adv-gold text-xs font-bold mb-6 tracking-wide">
+                        <span class="w-2 h-2 rounded-full bg-green-500 mr-2 animate-pulse"></span>
+                        DISPONÍVEL PARA ATENDIMENTO IMEDIATO
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-4">
+                        Defesa dos seus direitos com <span class="text-transparent bg-clip-text bg-gradient-to-r from-adv-gold to-adv-gold-light">Estratégia e Segurança</span>
+                    </h1>
+                    
+                    <p class="text-lg text-gray-300 mb-2 font-medium">
+                        Trabalhista • Previdenciário • Consumidor
+                    </p>
+                    
+                    <div class="flex items-center justify-center lg:justify-start gap-2 text-sm text-gray-400 mb-8">
+                        <i class="fas fa-map-marker-alt text-adv-gold"></i>
+                        <p>Atendimento Digital em todo o Brasil <span class="mx-1 text-gray-600">|</span> Sede em Brasília-DF</p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="https://wa.me/5561998566219" 
+                           class="flex items-center justify-center px-8 py-4 bg-adv-gold hover:bg-yellow-500 text-adv-navy text-lg font-bold rounded-xl shadow-[0_0_20px_rgba(212,175,55,0.3)] transition-all transform hover:-translate-y-1">
+                            <i class="fab fa-whatsapp text-xl mr-2"></i>
+                            Falar com Especialista
+                        </a>
+                        <a href="#atuacao" 
+                           class="flex items-center justify-center px-8 py-4 bg-adv-navy-light border border-gray-700 text-gray-300 font-semibold rounded-xl hover:bg-gray-800 transition-colors">
+                            Conhecer Áreas
+                        </a>
+                    </div>
+                    
+                    <div class="mt-8 pt-6 border-t border-gray-800 flex items-center justify-center lg:justify-start gap-6 text-sm text-gray-400">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check-circle text-adv-gold"></i>
+                            <span>Atendimento Humanizado</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check-circle text-adv-gold"></i>
+                            <span>100% Seguro</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 relative">
+                    <div class="relative rounded-2xl p-2 border border-adv-gold/30 bg-adv-navy-light/50 backdrop-blur-sm max-w-sm mx-auto transform rotate-1 hover:rotate-0 transition-transform duration-500">
+                        <img src="matheus-fernando-perfil.jpg" 
+                             alt="Dr. Matheus Fernando Advogado" 
+                             class="rounded-xl w-full h-auto object-cover shadow-2xl"
+                             onerror="this.src='https://placehold.co/600x800/112240/D4AF37?text=Foto+Profissional'">
+                        
+                        <div class="absolute -bottom-6 -left-6 bg-adv-navy border border-adv-gold p-4 rounded-lg shadow-xl hidden sm:block">
+                            <p class="text-adv-gold font-bold text-xl">OAB/DF 85.922</p>
+                            <p class="text-gray-400 text-xs uppercase">Registro Profissional</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
-    
-    <hr class="border-adv-dark-blue my-8 relative z-10">
 
-    <section class="py-16 md:py-24 relative z-10">
+    <section id="atuacao" class="py-20 bg-adv-navy-light relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center text-adv-gold mb-4">Áreas de Atuação</h2>
-            <p class="text-xl text-center text-gray-300 mb-12">Informações sobre a atuação jurídica e consultoria.</p>
+            <div class="text-center mb-16">
+                <h2 class="text-adv-gold text-sm font-bold uppercase tracking-widest mb-2">Expertise Jurídica</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-white">Como posso te ajudar hoje?</h3>
+            </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <div class="bg-adv-dark-blue p-8 rounded-xl shadow-2xl border-b-4 border-adv-gold transition duration-300 hover:scale-[1.03] hover:shadow-adv-gold/30">
-                    <div class="text-5xl text-adv-gold mb-4 text-center">
-                        <i class="fas fa-gavel"></i>
+                <div class="group bg-adv-navy p-8 rounded-2xl border border-gray-800 hover:border-adv-gold transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-adv-gold/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-adv-gold transition-colors">
+                        <i class="fas fa-briefcase text-2xl text-adv-gold group-hover:text-adv-navy"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-3 text-center">DIREITO DO TRABALHO</h3>
-                    <p class="text-gray-300 text-center">Atuação técnica em rescisão contratual, justa causa, acidentes de trabalho e demandas sindicais.</p>
+                    <h4 class="text-xl font-bold text-white mb-3">Direito do Trabalho</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Defesa incisiva em demissões injustas, reconhecimento de vínculo, horas extras, acidentes de trabalho e assédio moral.
+                    </p>
+                    <a href="https://wa.me/5561998566219?text=Preciso%20de%20ajuda%20trabalhista" class="inline-flex items-center text-adv-gold font-semibold hover:tracking-wide transition-all">
+                        Analisar meu caso <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                    </a>
                 </div>
 
-                <div class="bg-adv-dark-blue p-8 rounded-xl shadow-2xl border-b-4 border-adv-gold transition duration-300 hover:scale-[1.03] hover:shadow-adv-gold/30">
-                    <div class="text-5xl text-adv-gold mb-4 text-center">
-                        <i class="fas fa-file-invoice-dollar"></i>
+                <div class="group bg-adv-navy p-8 rounded-2xl border border-gray-800 hover:border-adv-gold transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-adv-gold/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-adv-gold transition-colors">
+                        <i class="fas fa-file-contract text-2xl text-adv-gold group-hover:text-adv-navy"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-3 text-center">DIREITO PREVIDENCIÁRIO</h3>
-                    <p class="text-gray-300 text-center">Atuação técnica em aposentadorias, auxílio-doença, pensão por morte e benefícios BPC/LOAS.</p>
+                    <h4 class="text-xl font-bold text-white mb-3">Direito Previdenciário</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Planejamento de aposentadoria, auxílio-doença, BPC/LOAS e recursos administrativos contra o INSS.
+                    </p>
+                    <a href="https://wa.me/5561998566219?text=Preciso%20de%20ajuda%20previdenciaria" class="inline-flex items-center text-adv-gold font-semibold hover:tracking-wide transition-all">
+                        Analisar meu caso <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                    </a>
                 </div>
 
-                <div class="bg-adv-dark-blue p-8 rounded-xl shadow-2xl border-b-4 border-adv-gold transition duration-300 hover:scale-[1.03] hover:shadow-adv-gold/30">
-                    <div class="text-5xl text-adv-gold mb-4 text-center">
-                        <i class="fas fa-credit-card"></i>
+                <div class="group bg-adv-navy p-8 rounded-2xl border border-gray-800 hover:border-adv-gold transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-adv-gold/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-adv-gold transition-colors">
+                        <i class="fas fa-shield-alt text-2xl text-adv-gold group-hover:text-adv-navy"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-3 text-center">DIREITO DO CONSUMIDOR</h3>
-                    <p class="text-gray-300 text-center">Atuação técnica em cobranças abusivas, negativação indevida e vícios em produtos/serviços.</p>
+                    <h4 class="text-xl font-bold text-white mb-3">Direito do Consumidor</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Ação contra negativação indevida, juros abusivos, problemas com voos, planos de saúde e produtos defeituosos.
+                    </p>
+                    <a href="https://wa.me/5561998566219?text=Preciso%20de%20ajuda%20consumidor" class="inline-flex items-center text-adv-gold font-semibold hover:tracking-wide transition-all">
+                        Analisar meu caso <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                    </a>
                 </div>
-            </div>
-            
-            <div class="mt-12 text-center">
-                <a 
-                    href="mailto:contato@matheusfernandoadv.com.br"
-                    class="mt-6 inline-block px-10 py-4 bg-adv-gold text-adv-navy text-lg font-bold rounded-xl shadow-xl hover:bg-adv-light-gold transition duration-300 transform hover:scale-[1.02]"
-                >
-                    Entre em Contato para Informações
-                </a>
             </div>
         </div>
     </section>
-    
-    <hr class="border-adv-dark-blue my-8 relative z-10">
 
-    <footer class="bg-adv-navy py-10 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            
-            <div class="flex flex-col md:flex-row justify-center md:justify-between items-center space-y-4 md:space-y-0">
-                <div class="text-gray-400 text-sm md:text-left">
-                    <p>Matheus Fernando Advocacia e Consultoria Jurídica</p>
-                    <p>OAB/DF <span class="text-adv-gold font-bold">85.922</span></p>
-                    <p class="mt-2">Brasília - DF</p>
+    <section class="py-20 bg-adv-navy">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-white mb-6">Por que escolher o escritório Matheus Fernando?</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-adv-navy-light rounded-full flex items-center justify-center border border-adv-gold text-adv-gold">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-white">Atendimento Nacional Digital</h4>
+                                <p class="text-gray-400 text-sm">Não importa onde você esteja, nosso escritório utiliza tecnologia para te atender com a mesma qualidade de uma reunião presencial, sem você sair de casa.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-adv-navy-light rounded-full flex items-center justify-center border border-adv-gold text-adv-gold">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-white">Agilidade e Transparência</h4>
+                                <p class="text-gray-400 text-sm">Comunicação direta pelo WhatsApp. Você fala com o advogado, não com robôs. Entenda cada passo do seu processo.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-adv-navy-light rounded-full flex items-center justify-center border border-adv-gold text-adv-gold">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-white">Segurança Jurídica</h4>
+                                <p class="text-gray-400 text-sm">Profissional devidamente inscrito na OAB/DF sob nº 85.922, atuando com ética e rigor técnico.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="flex items-center justify-center space-x-6">
-                    <a 
-                        href="https://wa.me/5561998566219"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="text-gray-300 hover:text-adv-gold transition duration-300 flex items-center"
-                        title="WhatsApp"
-                    >
-                        <i class="fab fa-whatsapp text-2xl mr-2"></i>
-                        (61) 99856-6219
-                    </a>
-                    <a 
-                        href="https://www.instagram.com/matheusfernandoadv/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="text-gray-300 hover:text-adv-gold transition duration-300 flex items-center"
-                        title="Instagram"
-                    >
-                        <i class="fab fa-instagram text-2xl"></i>
+                <div class="md:w-1/2 bg-gradient-to-br from-adv-navy-light to-gray-900 p-8 rounded-2xl border border-gray-700 text-center">
+                    <h3 class="text-2xl font-bold text-white mb-4">Seus direitos não podem esperar</h3>
+                    <p class="text-gray-300 mb-6">Cada dia que passa pode significar a perda de prazos importantes. Agende uma consulta de avaliação agora mesmo.</p>
+                    <a href="https://wa.me/5561998566219" class="block w-full py-4 bg-adv-gold text-adv-navy font-bold rounded-lg hover:bg-white hover:text-adv-navy transition-colors">
+                        Iniciar Atendimento no WhatsApp
                     </a>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <p class="mt-8 text-xs text-gray-600">
-                Este site é meramente informativo, de acordo com o Código de Ética e Disciplina da OAB, e não dispensa a consulta com um profissional do direito.
-            </p>
+    <section class="py-16 bg-adv-navy-light border-t border-gray-800">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-white mb-10">Dúvidas Frequentes</h2>
+            
+            <div class="space-y-4">
+                <details class="group bg-adv-navy p-4 rounded-lg border border-gray-800 cursor-pointer">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none text-white">
+                        <span>O atendimento online é seguro?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fas fa-chevron-down text-adv-gold"></i>
+                        </span>
+                    </summary>
+                    <p class="text-gray-400 mt-3 group-open:animate-fadeIn text-sm">
+                        Sim. Utilizamos ferramentas criptografadas para troca de mensagens e documentos. O processo eletrônico hoje permite que atuemos em qualquer lugar do Brasil com total validade jurídica.
+                    </p>
+                </details>
+
+                <details class="group bg-adv-navy p-4 rounded-lg border border-gray-800 cursor-pointer">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none text-white">
+                        <span>Quanto custa a consulta?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fas fa-chevron-down text-adv-gold"></i>
+                        </span>
+                    </summary>
+                    <p class="text-gray-400 mt-3 group-open:animate-fadeIn text-sm">
+                        Cada caso é único. Prezamos pela transparência e ética. Entre em contato pelo WhatsApp para uma avaliação inicial do seu caso e explicação sobre honorários.
+                    </p>
+                </details>
+
+                <details class="group bg-adv-navy p-4 rounded-lg border border-gray-800 cursor-pointer">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none text-white">
+                        <span>Em quais estados o escritório atua?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fas fa-chevron-down text-adv-gold"></i>
+                        </span>
+                    </summary>
+                    <p class="text-gray-400 mt-3 group-open:animate-fadeIn text-sm">
+                        Atuamos em todo o território nacional de forma digital. Se você precisa de atendimento presencial, nossa sede fica em Brasília-DF.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-12 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-2xl font-bold text-white">Matheus Fernando</h2>
+                    <p class="text-adv-gold text-sm tracking-widest uppercase mb-2">Advocacia e Consultoria</p>
+                    <p class="text-gray-500 text-sm">OAB/DF 85.922</p>
+                    <p class="text-gray-500 text-sm mt-1">Brasília - DF | Atuação Nacional</p>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/matheusfernandoadv/" target="_blank" class="text-gray-400 hover:text-adv-gold transition-colors text-2xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/5561998566219" target="_blank" class="text-gray-400 hover:text-adv-gold transition-colors text-2xl">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="mailto:contato@matheusfernandoadv.com.br" class="text-gray-400 hover:text-adv-gold transition-colors text-2xl">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-900 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
+                <p>&copy; 2024 Matheus Fernando Advocacia. Todos os direitos reservados.</p>
+                <p class="mt-2 md:mt-0">Este site não substitui a consulta com um advogado. Atuação conforme o Código de Ética da OAB.</p>
+            </div>
         </div>
     </footer>
 
 </body>
 </html>
-
