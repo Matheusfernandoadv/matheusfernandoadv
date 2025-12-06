@@ -10,7 +10,7 @@
     <link rel="icon" href="logo-matheus-fernando.jpg" type="image/jpeg">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <script>
@@ -26,9 +26,15 @@
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
+                        // Nova Fonte Premium para Títulos
+                        serif: ['Playfair Display', 'serif'],
                     },
                     backgroundImage: {
                         'hero-gradient': 'linear-gradient(to right bottom, #0A192F, #0e203a, #122846)',
+                    },
+                    boxShadow: {
+                        // Sombra sutil mais elegante
+                        'premium': '0 10px 30px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(197, 160, 89, 0.1)',
                     }
                 }
             }
@@ -39,11 +45,11 @@
         /* Botão WhatsApp Sóbrio */
         .btn-whatsapp {
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Sombra mais forte */
         }
         .btn-whatsapp:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+            transform: scale(1.08);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.7);
         }
         
         /* Marca d'água no fundo */
@@ -69,9 +75,15 @@
         /* Estilização para o Acordeão (Details/Summary) */
         details {
             border: 1px solid #152a46; /* adv-navy-light */
-            border-radius: 0.25rem;
+            border-radius: 0.5rem;
             margin-bottom: 1rem;
             background-color: #0A192F; /* adv-navy */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        details:hover {
+            border-color: #C5A059;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
         }
         summary {
             font-weight: 600;
@@ -84,6 +96,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            font-family: 'Playfair Display', serif; /* Título no Acordeão */
+            font-size: 1.15rem;
         }
         details[open] summary {
             color: #E5C585; /* adv-gold-light */
@@ -93,7 +107,6 @@
             padding: 0.5rem 1.5rem 1.5rem 1.5rem;
             color: #e5e7eb; /* gray-200 */
         }
-        /* Ajuste do ícone de seta */
         summary::-webkit-details-marker {
             display: none;
         }
@@ -120,7 +133,7 @@
         <i class="fab fa-whatsapp text-3xl md:text-4xl"></i>
     </a>
 
-    <header class="fixed top-0 w-full z-40 bg-adv-navy/98 border-b border-gray-800 shadow-md">
+    <header class="fixed top-0 w-full z-40 bg-adv-navy/98 border-b border-gray-800 shadow-xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
                 <div class="flex items-center gap-4">
@@ -129,7 +142,7 @@
                          class="h-12 w-12 md:h-14 md:w-14 rounded-full border border-adv-gold object-cover shadow-lg"
                          onerror="this.src='https://placehold.co/100x100/152a46/C5A059?text=MF'">
                     <div class="flex flex-col justify-center">
-                        <span class="text-lg md:text-xl font-bold tracking-wide text-white uppercase">Matheus Fernando</span>
+                        <span class="text-lg md:text-xl font-bold tracking-wide text-white uppercase font-serif">Matheus Fernando</span>
                         <div class="h-[1px] w-full bg-adv-gold my-1"></div>
                         <span class="text-[10px] md:text-xs text-gray-300 uppercase tracking-widest font-medium">Advocacia & Consultoria Jurídica</span>
                     </div>
@@ -138,16 +151,16 @@
                 <div class="hidden md:flex items-center gap-6">
                     <div class="text-right">
                         <p class="text-xs text-gray-400 uppercase tracking-wide">Inscrição OAB/DF</p>
-                        <p class="text-adv-gold font-bold">85.922</p>
+                        <p class="text-adv-gold font-bold font-serif">85.922</p>
                     </div>
                     <a href="https://wa.me/5561998566219" 
-                       class="px-6 py-2 bg-transparent border border-gray-500 text-gray-300 font-medium text-sm hover:border-adv-gold hover:text-adv-gold transition duration-300 uppercase tracking-wider">
+                       class="px-6 py-2 bg-transparent border border-adv-gold text-adv-gold font-medium text-sm hover:bg-adv-gold hover:text-adv-navy transition duration-300 uppercase tracking-wider shadow-md">
                         Agendar Consulta
                     </a>
                 </div>
 
                 <div class="md:hidden">
-                    <a href="https://wa.me/5561998566219" class="text-gray-300 border border-gray-600 px-4 py-2 text-xs uppercase tracking-wide hover:text-white hover:border-white transition">
+                    <a href="https://wa.me/5561998566219" class="text-gray-300 border border-adv-gold px-4 py-2 text-xs uppercase tracking-wide hover:text-white hover:bg-adv-gold hover:text-adv-navy transition">
                         Contato
                     </a>
                 </div>
@@ -166,7 +179,7 @@
                         </span>
                     </div>
                     
-                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight mb-6">
                         Advocacia pautada na <span class="text-adv-gold">Ética</span>, <span class="text-adv-gold">Técnica</span> e na <span class="text-adv-gold">Defesa dos seus Direitos</span>.
                     </h1>
                     
@@ -176,29 +189,26 @@
                     
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                         <a href="https://wa.me/5561998566219" 
-                           class="flex items-center justify-center px-8 py-3 bg-adv-gold hover:bg-[#b08d4b] text-adv-navy font-bold text-sm uppercase tracking-wide rounded shadow-md transition-colors">
+                           class="flex items-center justify-center px-8 py-3 bg-adv-gold hover:bg-[#b08d4b] text-adv-navy font-bold text-sm uppercase tracking-wide rounded shadow-premium transition-colors">
                             <i class="fab fa-whatsapp text-lg mr-2"></i>
                             Entrar em Contato
                         </a>
                         <a href="#detalhes-areas" 
-                           class="flex items-center justify-center px-8 py-3 bg-transparent border border-gray-600 text-gray-300 hover:text-white hover:border-gray-400 font-medium text-sm uppercase tracking-wide rounded transition-colors">
+                           class="flex items-center justify-center px-8 py-3 bg-transparent border border-gray-600 text-gray-300 hover:text-white hover:border-adv-gold font-medium text-sm uppercase tracking-wide rounded transition-colors">
                             Ver Detalhes da Consultoria
                         </a>
                     </div>
                 </div>
 
                 <div class="lg:w-1/2 relative flex justify-center lg:justify-end">
-                    <div class="relative p-3 border border-gray-700 bg-adv-navy-light/40 backdrop-blur-sm shadow-2xl max-w-sm">
-                        <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-adv-gold -mt-1 -ml-1"></div>
-                        <div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-adv-gold -mb-1 -mr-1"></div>
-                        
+                    <div class="relative p-3 border-2 border-adv-gold bg-adv-navy-light/40 backdrop-blur-sm shadow-2xl max-w-sm hover:shadow-premium transition-shadow duration-500">
                         <img src="matheus-fernando-perfil.jpg" 
                              alt="Matheus Fernando - Advogado Especialista em Atendimento Jurídico" 
                              class="w-full h-auto object-cover filter grayscale-[10%] hover:grayscale-0 transition duration-700"
                              onerror="this.src='https://placehold.co/600x800/152a46/C5A059?text=Dr.+Matheus+Fernando'">
                         
                         <div class="bg-adv-navy py-3 px-4 text-center border-t border-gray-800">
-                            <p class="text-white font-semibold text-lg">Matheus Fernando</p>
+                            <p class="text-white font-semibold text-lg font-serif">Matheus Fernando</p>
                             <p class="text-adv-gold text-xs uppercase tracking-widest">Advogado | OAB-DF 85.922</p>
                         </div>
                     </div>
@@ -210,51 +220,51 @@
     <section id="atuacao" class="py-20 bg-adv-navy-light/95 relative z-10 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-adv-gold text-xs font-bold uppercase tracking-[0.2em] mb-3">Serviços e Consultoria Jurídica Especializada</h2>
-                <h3 class="text-3xl font-bold text-white">Especialidades do Escritório</h3>
+                <h2 class="text-adv-gold text-xs font-bold uppercase tracking-[0.2em] mb-3 font-sans">Serviços e Consultoria Jurídica Especializada</h2>
+                <h3 class="text-3xl font-serif font-bold text-white">Especialidades do Escritório</h3>
                 <div class="w-20 h-1 bg-adv-gold mx-auto mt-4"></div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 
-                <div class="bg-adv-navy p-8 border border-gray-800 hover:border-adv-gold/50 transition-colors duration-300">
+                <div class="bg-adv-navy p-8 border border-gray-800 hover:border-adv-gold transition-colors duration-300 shadow-md hover:shadow-premium">
                     <div class="text-adv-gold text-3xl mb-4"><i class="fas fa-briefcase"></i></div>
-                    <h4 class="text-lg font-bold text-white mb-3 uppercase">Advogado do Trabalho</h4>
+                    <h4 class="text-xl font-serif font-bold text-white mb-3 uppercase">Advogado do Trabalho</h4>
                     <p class="text-gray-400 text-sm leading-relaxed text-justify">
                         Foco na defesa de trabalhadores em <strong>reclamações trabalhistas</strong>, acerto rescisório e resolução de conflitos sindicais e individuais.
                     </p>
                 </div>
-                <div class="bg-adv-navy p-8 border border-gray-800 hover:border-adv-gold/50 transition-colors duration-300">
+                <div class="bg-adv-navy p-8 border border-gray-800 hover:border-adv-gold transition-colors duration-300 shadow-md hover:shadow-premium">
                     <div class="text-adv-gold text-3xl mb-4"><i class="fas fa-gavel"></i></div>
-                    <h4 class="text-lg font-bold text-white mb-3 uppercase">Advogado Criminal</h4>
+                    <h4 class="text-xl font-serif font-bold text-white mb-3 uppercase">Advogado Criminal</h4>
                     <p class="text-gray-400 text-sm leading-relaxed text-justify">
                         Assessoria completa em inquéritos, <strong>acompanhamento de prisões em flagrante</strong>, audiências de custódia e defesa em processos penais.
                     </p>
                 </div>
-                <div class="bg-adv-navy p-8 border border-gray-800 hover:border-adv-gold/50 transition-colors duration-300">
+                <div class="bg-adv-navy p-8 border border-gray-800 hover:border-adv-gold transition-colors duration-300 shadow-md hover:shadow-premium">
                     <div class="text-adv-gold text-3xl mb-4"><i class="fas fa-file-contract"></i></div>
-                    <h4 class="text-lg font-bold text-white mb-3 uppercase">Advogado Previdenciário</h4>
+                    <h4 class="text-xl font-serif font-bold text-white mb-3 uppercase">Advogado Previdenciário</h4>
                     <p class="text-gray-400 text-sm leading-relaxed text-justify">
                         Planejamento e atuação judicial para <strong>concessão de aposentadorias</strong>, auxílio-doença, pensão por morte e Benefício de Prestação Continuada (BPC/LOAS).
                     </p>
                 </div>
-                <div class="bg-adv-navy p-8 border border-gray-800 hover:border-adv-gold/50 transition-colors duration-300">
+                <div class="bg-adv-navy p-8 border border-gray-800 hover:border-adv-gold transition-colors duration-300 shadow-md hover:shadow-premium">
                     <div class="text-adv-gold text-3xl mb-4"><i class="fas fa-scale-balanced"></i></div>
-                    <h4 class="text-lg font-bold text-white mb-3 uppercase">Direito do Consumidor</h4>
+                    <h4 class="text-xl font-serif font-bold text-white mb-3 uppercase">Direito do Consumidor</h4>
                     <p class="text-gray-400 text-sm leading-relaxed text-justify">
                         Atuação em reparação de danos morais e materiais, cobranças e negativações indevidas e problemas em compras e serviços.
                     </p>
                 </div>
-                <div class="bg-adv-navy p-8 border border-gray-800 hover:border-adv-gold/50 transition-colors duration-300">
+                <div class="bg-adv-navy p-8 border border-gray-800 hover:border-adv-gold transition-colors duration-300 shadow-md hover:shadow-premium">
                     <div class="text-adv-gold text-3xl mb-4"><i class="fas fa-users"></i></div>
-                    <h4 class="text-lg font-bold text-white mb-3 uppercase">Direito de Família e Cível</h4>
+                    <h4 class="text-xl font-serif font-bold text-white mb-3 uppercase">Direito de Família e Cível</h4>
                     <p class="text-gray-400 text-sm leading-relaxed text-justify">
                         Consultoria em conflitos familiares (divórcio, pensão, guarda), inventários e ações cíveis como contratos e regularização de imóveis.
                     </p>
                 </div>
 
-                <div class="bg-adv-gold/10 p-8 border border-adv-gold/30 flex flex-col justify-center">
-                    <h4 class="text-xl font-bold text-white mb-4">Como Agendar a Consulta</h4>
+                <div class="bg-adv-gold/10 p-8 border border-adv-gold/30 flex flex-col justify-center shadow-md hover:shadow-premium transition-shadow">
+                    <h4 class="text-xl font-serif font-bold text-white mb-4">Como Agendar a Consulta</h4>
                     <ul class="space-y-3">
                         <li class="flex items-start">
                             <span class="font-bold text-adv-gold mr-3">1.</span>
@@ -269,7 +279,7 @@
                             <span class="text-gray-300 text-sm">Definimos a estratégia e o contrato de serviço.</span>
                         </li>
                     </ul>
-                    <a href="https://wa.me/5561998566219" class="mt-6 px-6 py-2 bg-adv-gold text-adv-navy hover:bg-white transition-colors text-sm font-semibold uppercase tracking-wide text-center">
+                    <a href="https://wa.me/5561998566219" class="mt-6 px-6 py-2 bg-adv-gold text-adv-navy hover:bg-white transition-colors text-sm font-semibold uppercase tracking-wide text-center shadow-md">
                         Iniciar Atendimento Jurídico
                     </a>
                 </div>
@@ -281,8 +291,8 @@
     <section id="detalhes-areas" class="py-20 bg-adv-navy relative z-10 border-t border-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-adv-gold text-xs font-bold uppercase tracking-[0.2em] mb-3">Entenda Seus Direitos</h2>
-                <h3 class="text-3xl font-bold text-white">Detalhes e Causas Atendidas pelo Escritório</h3>
+                <h2 class="text-adv-gold text-xs font-bold uppercase tracking-[0.2em] mb-3 font-sans">Entenda Seus Direitos</h2>
+                <h3 class="text-3xl font-serif font-bold text-white">Detalhes e Causas Atendidas pelo Escritório</h3>
                 <div class="w-20 h-1 bg-adv-gold mx-auto mt-4"></div>
                 <p class="text-gray-400 mt-4 max-w-3xl mx-auto">Clique em cada área para expandir e conhecer as causas jurídicas específicas que podem ser resolvidas com a nossa consultoria e atuação.</p>
             </div>
@@ -293,7 +303,7 @@
                     <summary>Direito do Trabalho (Área do Trabalhador)</summary>
                     <div class="details-content">
                         <p class="mb-4">O Direito do Trabalho protege o trabalhador nas relações de emprego. Nossa atuação garante que seus direitos, previstos na CLT e na Constituição, sejam integralmente respeitados.</p>
-                        <h4 class="text-adv-gold font-semibold mb-2">Causas Frequentes:</h4>
+                        <h4 class="text-adv-gold font-serif font-semibold mb-2">Causas Frequentes:</h4>
                         <ul class="list-disc list-inside space-y-1 text-sm text-gray-300">
                             <li><strong>Demissão sem Justa Causa:</strong> Reversão ou cálculo correto de verbas rescisórias.</li>
                             <li><strong>Rescisão Indireta:</strong> Reconhecimento de justa causa do empregador.</li>
@@ -308,7 +318,7 @@
                     <summary>Direito Criminal (Defesa e Acompanhamento)</summary>
                     <div class="details-content">
                         <p class="mb-4">O Direito Penal exige defesa técnica, ética e imediata. Nossa consultoria abrange todas as fases do processo, desde o inquérito policial até o julgamento final, garantindo o devido processo legal.</p>
-                        <h4 class="text-adv-gold font-semibold mb-2">Causas Frequentes:</h4>
+                        <h4 class="text-adv-gold font-serif font-semibold mb-2">Causas Frequentes:</h4>
                         <ul class="list-disc list-inside space-y-1 text-sm text-gray-300">
                             <li><strong>Defesa em Inquéritos Policiais:</strong> Acompanhamento e diligências na fase investigativa.</li>
                             <li><strong>Prisão em Flagrante:</strong> Acompanhamento 24h em delegacias e audiência de custódia.</li>
@@ -323,7 +333,7 @@
                     <summary>Direito Previdenciário (INSS e Benefícios)</summary>
                     <div class="details-content">
                         <p class="mb-4">Especialidade voltada para a garantia de benefícios do INSS e regimes próprios. Fazemos o planejamento e a representação administrativa e judicial contra negativas do órgão.</p>
-                        <h4 class="text-adv-gold font-semibold mb-2">Causas Frequentes:</h4>
+                        <h4 class="text-adv-gold font-serif font-semibold mb-2">Causas Frequentes:</h4>
                         <ul class="list-disc list-inside space-y-1 text-sm text-gray-300">
                             <li><strong>Aposentadoria:</strong> Planejamento e concessão (por idade, tempo de contribuição, especial).</li>
                             <li><strong>Auxílio-Doença (Incapacidade):</strong> Recurso e ação judicial contra o indeferimento do INSS.</li>
@@ -337,7 +347,7 @@
                     <summary>Direito de Família e Cível (Conflitos Pessoais e Patrimoniais)</summary>
                     <div class="details-content">
                         <p class="mb-4">O Cível abrange a maior parte das relações privadas. Nossa consultoria familiar busca soluções rápidas e humanizadas para conflitos pessoais, e o Cível atua na proteção de bens e contratos.</p>
-                        <h4 class="text-adv-gold font-semibold mb-2">Causas Frequentes:</h4>
+                        <h4 class="text-adv-gold font-serif font-semibold mb-2">Causas Frequentes:</h4>
                         <ul class="list-disc list-inside space-y-1 text-sm text-gray-300">
                             <li><strong>Divórcio e Partilha de Bens:</strong> Consensual ou litigioso, judicial e extrajudicial.</li>
                             <li><strong>Pensão Alimentícia:</strong> Fixação, revisão e execução.</li>
@@ -352,7 +362,7 @@
                     <summary>Direito do Consumidor (Defesa contra Abusos)</summary>
                     <div class="details-content">
                         <p class="mb-4">O Código de Defesa do Consumidor protege a parte mais vulnerável da relação (o consumidor). Atuamos na busca pela reparação de danos e na cessação de práticas abusivas.</p>
-                        <h4 class="text-adv-gold font-semibold mb-2">Causas Frequentes:</h4>
+                        <h4 class="text-adv-gold font-serif font-semibold mb-2">Causas Frequentes:</h4>
                         <ul class="list-disc list-inside space-y-1 text-sm text-gray-300">
                             <li><strong>Negativação Indevida:</strong> Inclusão indevida em cadastros (SPC/Serasa) e pedido de danos morais.</li>
                             <li><strong>Cobrança Abusiva e Indevida:</strong> Revisão de juros e tarifas em contratos bancários ou serviços.</li>
@@ -371,7 +381,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">Compromisso com a Excelência Jurídica</h2>
+                    <h2 class="text-3xl font-serif font-bold text-white mb-6">Compromisso com a Excelência Jurídica</h2>
                     <p class="text-gray-300 mb-6 text-justify leading-relaxed">
                         A advocacia exige atualização constante e uma atuação rigorosa na defesa dos interesses do cliente. Nosso escritório preza pela transparência em todas as etapas processuais, mantendo o cliente informado e seguro sobre o andamento de sua demanda.
                     </p>
@@ -400,7 +410,7 @@
                         <blockquote class="text-xl md:text-2xl text-white font-serif italic mb-4">
                             "A advocacia não é uma profissão de covardes."
                         </blockquote>
-                        <cite class="text-adv-gold font-semibold not-italic">— Sobral Pinto</cite>
+                        <cite class="text-adv-gold font-semibold not-italic font-serif">— Sobral Pinto</cite>
                     </div>
                 </div>
             </div>
@@ -418,7 +428,7 @@
                          onerror="this.style.display='none'">
                     
                     <div>
-                        <h2 class="text-xl font-bold text-white uppercase tracking-wide">Matheus Fernando</h2>
+                        <h2 class="text-xl font-bold text-white uppercase tracking-wide font-serif">Matheus Fernando</h2>
                         <p class="text-gray-500 text-xs mt-1">Advogado inscrito na <strong>OAB/DF sob o nº 85.922</strong></p>
                         <p class="text-gray-500 text-xs mt-1">Brasília - DF | Atuação em todo o Brasil</p>
                     </div>
@@ -452,4 +462,5 @@
 
 </body>
 </html>
+
 
