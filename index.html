@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matheus Fernando | Advocacia e Consultoria Jurídica</title>
     
-    <meta name="description" content="Advocacia Trabalhista, Criminal, Previdenciária e Cível. Atuação técnica e ética. Escritório em Brasília com atendimento em todo o território nacional.">
+    <title>Advogado Especialista em Direito do Trabalho, Criminal e Previdenciário | Matheus Fernando Advocacia</title>
+    <meta name="description" content="Atendimento jurídico com ética e técnica em Brasília e online. Consultoria especializada em causas Trabalhistas, Criminais, Previdenciárias e Cíveis. OAB/DF 85.922.">
+    
     <link rel="icon" href="logo-matheus-fernando.jpg" type="image/jpeg">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -64,6 +65,47 @@
                 text-align: left;
             }
         }
+
+        /* Estilização para o Acordeão (Details/Summary) */
+        details {
+            border: 1px solid #152a46; /* adv-navy-light */
+            border-radius: 0.25rem;
+            margin-bottom: 1rem;
+            background-color: #0A192F; /* adv-navy */
+        }
+        summary {
+            font-weight: 600;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            outline: none;
+            color: #C5A059; /* adv-gold */
+            border-bottom: 1px solid transparent;
+            transition: border-bottom 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        details[open] summary {
+            color: #E5C585; /* adv-gold-light */
+            border-bottom: 1px solid #152a46;
+        }
+        .details-content {
+            padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+            color: #e5e7eb; /* gray-200 */
+        }
+        /* Ajuste do ícone de seta */
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        summary::after {
+            content: "\2b"; /* Símbolo de mais (+) */
+            font-size: 1.5rem;
+            margin-left: 0.5rem;
+            transition: transform 0.2s;
+        }
+        details[open] summary::after {
+            content: "\2212"; /* Símbolo de menos (-) */
+        }
     </style>
 </head>
 <body class="bg-adv-navy text-gray-100 font-sans antialiased relative">
@@ -83,7 +125,7 @@
             <div class="flex justify-between items-center h-24">
                 <div class="flex items-center gap-4">
                     <img src="logo-matheus-fernando.jpg" 
-                         alt="Logo Matheus Fernando Advocacia" 
+                         alt="Logo Matheus Fernando Advocacia - Consultoria Jurídica Brasília" 
                          class="h-12 w-12 md:h-14 md:w-14 rounded-full border border-adv-gold object-cover shadow-lg"
                          onerror="this.src='https://placehold.co/100x100/152a46/C5A059?text=MF'">
                     <div class="flex flex-col justify-center">
@@ -120,7 +162,7 @@
                 <div class="lg:w-1/2 text-center lg:text-left">
                     <div class="inline-block px-3 py-1 mb-6 border-l-2 border-adv-gold">
                         <span class="text-adv-gold text-xs md:text-sm font-semibold uppercase tracking-widest">
-                            Atuação em Âmbito Nacional
+                            Advocacia Especializada em Causas Trabalhistas, Criminais e Previdenciárias
                         </span>
                     </div>
                     
@@ -129,7 +171,7 @@
                     </h1>
                     
                     <p class="text-base md:text-lg text-gray-300 mb-8 font-light leading-relaxed max-w-2xl mx-auto lg:mx-0 text-justify-mobile">
-                        Atuação especializada nas áreas Trabalhista, Criminal, Previdenciária e Cível. Oferecemos consultoria jurídica preventiva e contenciosa, com sede em Brasília-DF e estrutura digital para atendimento em todo o Brasil.
+                        Atuação especializada nas áreas Trabalhista, Criminal, Previdenciária e Cível. Oferecemos **atendimento jurídico** consultivo e contencioso, com sede em Brasília-DF e estrutura digital para todo o Brasil.
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -138,9 +180,9 @@
                             <i class="fab fa-whatsapp text-lg mr-2"></i>
                             Entrar em Contato
                         </a>
-                        <a href="#atuacao" 
+                        <a href="#detalhes-areas" 
                            class="flex items-center justify-center px-8 py-3 bg-transparent border border-gray-600 text-gray-300 hover:text-white hover:border-gray-400 font-medium text-sm uppercase tracking-wide rounded transition-colors">
-                            Ver Áreas de Atuação
+                            Ver Detalhes da Consultoria
                         </a>
                     </div>
                 </div>
@@ -151,7 +193,7 @@
                         <div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-adv-gold -mb-1 -mr-1"></div>
                         
                         <img src="matheus-fernando-perfil.jpg" 
-                             alt="Matheus Fernando - Advogado" 
+                             alt="Matheus Fernando - Advogado Especialista em Atendimento Jurídico" 
                              class="w-full h-auto object-cover filter grayscale-[10%] hover:grayscale-0 transition duration-700"
                              onerror="this.src='https://placehold.co/600x800/152a46/C5A059?text=Dr.+Matheus+Fernando'">
                         
@@ -168,7 +210,7 @@
     <section id="atuacao" class="py-20 bg-adv-navy-light/95 relative z-10 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-adv-gold text-xs font-bold uppercase tracking-[0.2em] mb-3">Atuação Jurídica</h2>
+                <h2 class="text-adv-gold text-xs font-bold uppercase tracking-[0.2em] mb-3">Serviços e Consultoria Jurídica Especializada</h2>
                 <h3 class="text-3xl font-bold text-white">Especialidades do Escritório</h3>
                 <div class="w-20 h-1 bg-adv-gold mx-auto mt-4"></div>
             </div>
@@ -177,41 +219,37 @@
                 
                 <div class="bg-adv-navy p-8 border border-gray-800 hover:border-adv-gold/50 transition-colors duration-300">
                     <div class="text-adv-gold text-3xl mb-4"><i class="fas fa-briefcase"></i></div>
-                    <h4 class="text-lg font-bold text-white mb-3 uppercase">Direito do Trabalho</h4>
+                    <h4 class="text-lg font-bold text-white mb-3 uppercase">Advogado do Trabalho</h4>
                     <p class="text-gray-400 text-sm leading-relaxed text-justify">
-                        Atuação contenciosa e preventiva nas relações de trabalho. Defesa em reclamações trabalhistas, rescisões indiretas, reconhecimento de vínculo empregatício, acidentes de trabalho e demandas sindicais.
+                        Foco na defesa de trabalhadores em **reclamações trabalhistas**, acerto rescisório e resolução de conflitos sindicais e individuais.
                     </p>
                 </div>
-
                 <div class="bg-adv-navy p-8 border border-gray-800 hover:border-adv-gold/50 transition-colors duration-300">
                     <div class="text-adv-gold text-3xl mb-4"><i class="fas fa-gavel"></i></div>
-                    <h4 class="text-lg font-bold text-white mb-3 uppercase">Direito Criminal</h4>
+                    <h4 class="text-lg font-bold text-white mb-3 uppercase">Advogado Criminal</h4>
                     <p class="text-gray-400 text-sm leading-relaxed text-justify">
-                        Assessoria jurídica em inquéritos policiais, acompanhamento de prisões em flagrante, audiências de custódia, impetração de Habeas Corpus, pedidos de liberdade provisória e defesa em processos penais.
+                        Assessoria completa em inquéritos, **acompanhamento de prisões em flagrante**, audiências de custódia e defesa em processos penais.
                     </p>
                 </div>
-
                 <div class="bg-adv-navy p-8 border border-gray-800 hover:border-adv-gold/50 transition-colors duration-300">
                     <div class="text-adv-gold text-3xl mb-4"><i class="fas fa-file-contract"></i></div>
-                    <h4 class="text-lg font-bold text-white mb-3 uppercase">Direito Previdenciário</h4>
+                    <h4 class="text-lg font-bold text-white mb-3 uppercase">Advogado Previdenciário</h4>
                     <p class="text-gray-400 text-sm leading-relaxed text-justify">
-                        Planejamento previdenciário e atuação administrativa ou judicial para concessão de aposentadorias, auxílio-doença, pensão por morte e Benefício de Prestação Continuada (BPC/LOAS).
+                        Planejamento e atuação judicial para **concessão de aposentadorias**, auxílio-doença, pensão por morte e Benefício de Prestação Continuada (BPC/LOAS).
                     </p>
                 </div>
-
                 <div class="bg-adv-navy p-8 border border-gray-800 hover:border-adv-gold/50 transition-colors duration-300">
                     <div class="text-adv-gold text-3xl mb-4"><i class="fas fa-scale-balanced"></i></div>
                     <h4 class="text-lg font-bold text-white mb-3 uppercase">Direito do Consumidor</h4>
                     <p class="text-gray-400 text-sm leading-relaxed text-justify">
-                        Reparação de danos materiais e morais decorrentes de relações de consumo, negativação indevida nos órgãos de proteção ao crédito, revisão de contratos bancários e responsabilidade civil.
+                        Atuação em reparação de danos morais e materiais, cobranças e negativações indevidas e problemas em compras e serviços.
                     </p>
                 </div>
-
                 <div class="bg-adv-navy p-8 border border-gray-800 hover:border-adv-gold/50 transition-colors duration-300">
                     <div class="text-adv-gold text-3xl mb-4"><i class="fas fa-users"></i></div>
                     <h4 class="text-lg font-bold text-white mb-3 uppercase">Direito de Família e Cível</h4>
                     <p class="text-gray-400 text-sm leading-relaxed text-justify">
-                        Resolução de conflitos familiares, divórcios (judiciais e extrajudiciais), ações de alimentos, guarda, inventários, partilha de bens, elaboração de contratos e regularização fundiária.
+                        Consultoria em conflitos familiares (divórcio, pensão, guarda), inventários e ações cíveis como contratos e regularização de imóveis.
                     </p>
                 </div>
 
@@ -220,26 +258,115 @@
                     <ul class="space-y-3">
                         <li class="flex items-start">
                             <span class="font-bold text-adv-gold mr-3">1.</span>
-                            <span class="text-gray-300 text-sm">Envie sua mensagem via WhatsApp ou E-mail, descrevendo brevemente o caso.</span>
+                            <span class="text-gray-300 text-sm">Envie sua mensagem via WhatsApp ou E-mail.</span>
                         </li>
                         <li class="flex items-start">
                             <span class="font-bold text-adv-gold mr-3">2.</span>
-                            <span class="text-gray-300 text-sm">Agendaremos a consulta (online ou presencial) para análise aprofundada.</span>
+                            <span class="text-gray-300 text-sm">Agendaremos a consulta para análise aprofundada.</span>
                         </li>
                         <li class="flex items-start">
                             <span class="font-bold text-adv-gold mr-3">3.</span>
-                            <span class="text-gray-300 text-sm">Após a consulta e análise documental, definimos a estratégia e o contrato.</span>
+                            <span class="text-gray-300 text-sm">Definimos a estratégia e o contrato de serviço.</span>
                         </li>
                     </ul>
                     <a href="https://wa.me/5561998566219" class="mt-6 px-6 py-2 bg-adv-gold text-adv-navy hover:bg-white transition-colors text-sm font-semibold uppercase tracking-wide text-center">
-                        Iniciar Contato
+                        Iniciar Atendimento Jurídico
                     </a>
                 </div>
 
             </div>
         </div>
     </section>
-    
+
+    <section id="detalhes-areas" class="py-20 bg-adv-navy relative z-10 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-adv-gold text-xs font-bold uppercase tracking-[0.2em] mb-3">Entenda Seus Direitos</h2>
+                <h3 class="text-3xl font-bold text-white">Detalhes e Causas Atendidas pelo Escritório</h3>
+                <div class="w-20 h-1 bg-adv-gold mx-auto mt-4"></div>
+                <p class="text-gray-400 mt-4 max-w-3xl mx-auto">Clique em cada área para expandir e conhecer as causas jurídicas específicas que podem ser resolvidas com a nossa consultoria e atuação.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+
+                <details open>
+                    <summary>Direito do Trabalho (Área do Trabalhador)</summary>
+                    <div class="details-content">
+                        <p class="mb-4">O Direito do Trabalho protege o trabalhador nas relações de emprego. Nossa atuação garante que seus direitos, previstos na CLT e na Constituição, sejam integralmente respeitados.</p>
+                        <h4 class="text-adv-gold font-semibold mb-2">Causas Frequentes:</h4>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-gray-300">
+                            <li>**Demissão sem Justa Causa:** Reversão ou cálculo correto de verbas rescisórias.</li>
+                            <li>**Rescisão Indireta:** Reconhecimento de justa causa do empregador.</li>
+                            <li>**Assédio Moral e Sexual:** Indenizações e reparação por danos morais.</li>
+                            <li>**Horas Extras e Adicionais:** Cobrança de jornada extraordinária, adicional noturno, insalubridade e periculosidade.</li>
+                            <li>**Reconhecimento de Vínculo:** Formalização de relação de trabalho não registrada.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Direito Criminal (Defesa e Acompanhamento)</summary>
+                    <div class="details-content">
+                        <p class="mb-4">O Direito Penal exige defesa técnica, ética e imediata. Nossa consultoria abrange todas as fases do processo, desde o inquérito policial até o julgamento final, garantindo o devido processo legal.</p>
+                        <h4 class="text-adv-gold font-semibold mb-2">Causas Frequentes:</h4>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-gray-300">
+                            <li>**Defesa em Inquéritos Policiais:** Acompanhamento e diligências na fase investigativa.</li>
+                            <li>**Prisão em Flagrante:** Acompanhamento 24h em delegacias e audiência de custódia.</li>
+                            <li>**Crimes Contra o Patrimônio:** Defesa em casos de roubo, furto e estelionato.</li>
+                            <li>**Crimes de Trânsito:** Defesa em acidentes com lesão ou morte.</li>
+                            <li>***Habeas Corpus* e Liberdade Provisória:** Medidas urgentes para liberação.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Direito Previdenciário (INSS e Benefícios)</summary>
+                    <div class="details-content">
+                        <p class="mb-4">Especialidade voltada para a garantia de benefícios do INSS e regimes próprios. Fazemos o planejamento e a representação administrativa e judicial contra negativas do órgão.</p>
+                        <h4 class="text-adv-gold font-semibold mb-2">Causas Frequentes:</h4>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-gray-300">
+                            <li>**Aposentadoria:** Planejamento e concessão (por idade, tempo de contribuição, especial).</li>
+                            <li>**Auxílio-Doença (Incapacidade):** Recurso e ação judicial contra o indeferimento do INSS.</li>
+                            <li>**Pensão por Morte:** Habilitação e concessão do benefício.</li>
+                            <li>**BPC/LOAS:** Concessão do benefício assistencial para idosos e deficientes de baixa renda.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Direito de Família e Cível (Conflitos Pessoais e Patrimoniais)</summary>
+                    <div class="details-content">
+                        <p class="mb-4">O Cível abrange a maior parte das relações privadas. Nossa consultoria familiar busca soluções rápidas e humanizadas para conflitos pessoais, e o Cível atua na proteção de bens e contratos.</p>
+                        <h4 class="text-adv-gold font-semibold mb-2">Causas Frequentes:</h4>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-gray-300">
+                            <li>**Divórcio e Partilha de Bens:** Consensual ou litigioso, judicial e extrajudicial.</li>
+                            <li>**Pensão Alimentícia:** Fixação, revisão e execução.</li>
+                            <li>**Guarda e Regime de Visitas:** Definição da convivência com os filhos.</li>
+                            <li>**Inventário e Sucessões:** Judicial ou extrajudicial e elaboração de testamento.</li>
+                            <li>**Ações Cíveis:** Contratos, cobranças, despejo e Usucapião (regularização de imóveis).</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Direito do Consumidor (Defesa contra Abusos)</summary>
+                    <div class="details-content">
+                        <p class="mb-4">O Código de Defesa do Consumidor protege a parte mais vulnerável da relação (o consumidor). Atuamos na busca pela reparação de danos e na cessação de práticas abusivas.</p>
+                        <h4 class="text-adv-gold font-semibold mb-2">Causas Frequentes:</h4>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-gray-300">
+                            <li>**Negativação Indevida:** Inclusão indevida em cadastros (SPC/Serasa) e pedido de danos morais.</li>
+                            <li>**Cobrança Abusiva e Indevida:** Revisão de juros e tarifas em contratos bancários ou serviços.</li>
+                            <li>**Atraso e Cancelamento de Voos:** Indenização por danos morais e materiais em viagens.</li>
+                            <li>**Vícios e Defeitos:** Problemas com produtos e serviços (celulares, carros, eletrodomésticos).</li>
+                        </ul>
+                    </div>
+                </details>
+
+            </div>
+
+        </div>
+    </section>
+
     <section class="py-20 bg-adv-navy relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -249,7 +376,7 @@
                         A advocacia exige atualização constante e uma atuação rigorosa na defesa dos interesses do cliente. Nosso escritório preza pela transparência em todas as etapas processuais, mantendo o cliente informado e seguro sobre o andamento de sua demanda.
                     </p>
                     <p class="text-gray-300 mb-8 text-justify leading-relaxed">
-                        Apesar da sede em Brasília-DF, o escritório está plenamente adaptado à realidade do processo eletrônico (PJe), permitindo uma atuação célere e eficiente em qualquer tribunal do país, sem prejuízo da qualidade técnica.
+                        Apesar da sede em Brasília-DF, o escritório está plenamente adaptado à realidade do processo eletrônico (PJe), permitindo uma atuação célere e eficiente em qualquer tribunal do país, sem prejuízo da qualidade técnica do **atendimento jurídico**.
                     </p>
                     
                     <ul class="space-y-4">
@@ -286,13 +413,13 @@
                 
                 <div class="flex items-center gap-5 text-center md:text-left">
                     <img src="logo-matheus-fernando.jpg" 
-                         alt="Logo Rodapé" 
+                         alt="Matheus Fernando Advocacia - OAB DF" 
                          class="hidden md:block w-16 h-16 rounded-full border border-gray-800 opacity-70 grayscale hover:grayscale-0 transition duration-500"
                          onerror="this.style.display='none'">
                     
                     <div>
                         <h2 class="text-xl font-bold text-white uppercase tracking-wide">Matheus Fernando</h2>
-                        <p class="text-gray-500 text-xs mt-1">Advogado inscrito na OAB/DF sob o nº 85.922</p>
+                        <p class="text-gray-500 text-xs mt-1">Advogado inscrito na **OAB/DF sob o nº 85.922**</p>
                         <p class="text-gray-500 text-xs mt-1">Brasília - DF | Atuação em todo o Brasil</p>
                     </div>
                 </div>
@@ -325,4 +452,3 @@
 
 </body>
 </html>
-
